@@ -1,6 +1,7 @@
 package program;
 
 import composite.Structura;
+import models.Meniu;
 import models.Produs;
 
 public class Program {
@@ -9,6 +10,7 @@ public class Program {
         Structura structuraMeniu = new Structura("Meniu");
         Structura structuraBauturi = new Structura("Bauturi");
         Structura structuraMancare = new Structura("Mancare");
+        Meniu meniu = new Meniu(structuraMeniu, "La Mama");
 
         structuraMeniu.adaugaNod(structuraBauturi);
         structuraMeniu.adaugaNod(structuraMancare);
@@ -23,6 +25,7 @@ public class Program {
         structuraMancare.adaugaNod(produsThree);
         structuraMancare.adaugaNod(produsFour);
 
+        System.out.println(meniu.getNumeRestaurant());
         System.out.println(structuraMeniu.getInfo());
     }
 }
